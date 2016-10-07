@@ -1,4 +1,4 @@
-import { ModuleWithProviders }  from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
@@ -9,7 +9,6 @@ import { LoginGuard } from './login/login-guard.service';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent, canActivate: [LoginGuard] },
   { path: '', component: GuestComponent }
 ];
 

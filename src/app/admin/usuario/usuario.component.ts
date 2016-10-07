@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'admin',
+  selector: 'usuario',
   template: `
-  <h1>Admin</h1>
-  <a [routerLink]="['./usuario']">Usuário</a>
+  <h1>Usuário</h1>
   <router-outlet></router-outlet>
   `
 })
-export class AdminComponent { }
+export class UsuarioComponent { }

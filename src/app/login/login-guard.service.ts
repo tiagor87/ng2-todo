@@ -3,17 +3,24 @@ import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
   CanActivate,
+  CanActivateChild,
   Router
 }                         from '@angular/router';
 import { LoginService } from './login.service';
 
 @Injectable()
-export class LoginGuard implements CanActivate {
+export class LoginGuard implements CanActivate, CanActivateChild {
   constructor(private loginService: LoginService, private router: Router) {
 
   }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    console.log('Can activate');
+    return this.verificarLogin(state.url);
+  }
+
+  canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    console.log('Can activate child');
     return this.verificarLogin(state.url);
   }
 
