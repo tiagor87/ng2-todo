@@ -3,16 +3,18 @@
     <h1>Autenticação</h1>
   </div>
   <hr>
-  <form (ngSubmit)="entrar()">
+  <form name="usuarioForm" (ngSubmit)="entrar()">
     <div class="corpo">
       <div class="foto-usuario"></div>
       <div class="grupo-input">
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" [(ngModel)]="email" placeholder="tiago@nquatro.com.br">
+        <input id="email" name="email" type="email" (focus)="focus='email'" [(ngModel)]="email" placeholder="tiago@nquatro.com.br">
+        <div class="barra"></div>
       </div>
       <div class="grupo-input">
         <label for="senha">Senha</label>
         <input id="senha" name="senha" type="password" [(ngModel)]="senha" placeholder="******">
+        <div class="barra"></div>
       </div>
       <div class="grupo-acao">
         <button type="submit">Entrar</button>

@@ -30,13 +30,27 @@ input, .input {
   width: 100%;
   padding: 10px 5px;
   border: none;
-  border-bottom: solid 1px #0a631f;
-
-  transition: box-shadow 0.4s ease;
 }
-input:hover, .input:hover, input:focus, .input:focus {
-  box-shadow: 0 1px 1px rgba(0, 50, 0, 0.4), 0 2px 2px rgba(0, 50, 0, 0.2);
+input ~ .barra {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #0a631f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .4s ease;
+}
+.grupo-input, .grupo-acao {
+  margin-bottom: 10px;
+}
+.grupo-acao {
+  text-align: center;
+}
+input:focus, .input:focus {
   outline: none;
+}
+input:focus ~ .barra {
+  transform: scaleX(1);
 }
 form {
   margin-bottom: 0;
@@ -55,18 +69,21 @@ form {
 }
 button, .button {
   background-color: #0a631f;
-  color: #cee0d2;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   padding: 15px;
   border: none;
 
-  transition: box-shadow 0.4s ease;
+  transition: transform .2s ease, box-shadow 0.4s ease;
 }
 button:hover, .button:hover {
+  color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8), 0 4px 2px rgba(0, 0, 0, 0.4), 0 6px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
 }
 button:active, .button:active {
+  color: #ffffff;
   outline: none;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) inset, 0 4px 2px rgba(0, 0, 0, 0.4) inset, 0 6px 4px rgba(0, 0, 0, 0.2) inset;
 }

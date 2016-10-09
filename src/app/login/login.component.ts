@@ -11,7 +11,7 @@ export class LoginComponent {
   email: string;
   senha: string;
   constructor(private loginService: LoginService, private router: Router) {
-
+  
   }
 
   entrar() {

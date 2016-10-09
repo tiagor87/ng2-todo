@@ -15,6 +15,7 @@
 
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
+      '@angular/core/testing': 'npm:@angular/core/bundles/core-testing.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
       '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
       '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
@@ -24,8 +25,11 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
 
       // other libraries
-      'rxjs':                      'npm:rxjs',
+      'rxjs': 'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
+      'systemjs': 'node_modules/systemjs/dist/system.js',
+      'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js',
+      'traceur': 'node_modules/traceur/dist/commonjs/traceur.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
