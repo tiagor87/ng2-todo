@@ -2,8 +2,7 @@
 Error.stackTraceLimit = Infinity;
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 3000;
 
-__karma__.loaded = function () {
-};
+__karma__.loaded = function () {};
 
 
 function isJsFile(path) {
@@ -28,8 +27,7 @@ System.config({
   baseURL: '/base'
 });
 
-System.config(
-{
+System.config({
   paths: {
     // paths serve as alias
     'npm:': 'node_modules/'
@@ -72,7 +70,7 @@ Promise.all([
   testing.TestBed.initTestEnvironment(testingBrowser.BrowserDynamicTestingModule,
     testingBrowser.platformBrowserDynamicTesting());
 
-}).then(function() {
+}).then(function () {
   // Finally, load all spec files.
   // This will run the tests directly.
   return Promise.all(

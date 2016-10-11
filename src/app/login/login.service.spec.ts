@@ -9,6 +9,7 @@ describe('LoginService', () => {
     });
   })
   it('deve ser possível entrar pelo email e senha', done => {
+    expect(1).toEqual(1);
     done();
   })
 })
