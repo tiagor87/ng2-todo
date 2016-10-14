@@ -5,8 +5,9 @@ describe('LoginService', () => {
   let fixture: ComponentFixture<LoginService>;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [LoginService]
+      declarations: [LoginService]
     });
+    TestBed.createComponent(LoginService)
   })
   it('deve ser possível entrar pelo email e senha', done => {
     expect(1).toEqual(1);
